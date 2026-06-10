@@ -16,6 +16,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{asset('/adminasset/css/style.css')}}">
     <!-- End layout styles -->

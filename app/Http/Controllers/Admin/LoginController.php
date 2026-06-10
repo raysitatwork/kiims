@@ -32,12 +32,13 @@ class LoginController extends Controller
         }
 
         if ($validator->passes()) {
-            if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+            if (Auth::guard('admins')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
                 
-                $admin = Auth::guard('admin')->user();
+                $admin = Auth::guard('admins')->user();
                 
                 // Allow access if role is 2 or 3
-                if ($admin->role == 2 || $admin->role == 3) {
+                // if ($admin->role == 2 || $admin->role == 3) {
+                if ($admin->is_admin == 1) {
                     return redirect()->route('admin.dashboard');
                 } else {
                     Auth::guard('admin')->logout();

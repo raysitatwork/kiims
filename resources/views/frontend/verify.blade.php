@@ -50,11 +50,18 @@
                             <h4 class="mb-0">Enrollment Details</h4>
                         </div>
                         <div class="card-body">
+                            <div class="text-center">
+                                <img src="{{ asset('/uploads/certificates/'.$user->certificate) }}" alt="certificate" width="100px">
+                            </div>
                             <table class="table table-bordered">
                                 <tr>
                                     <th>Enrollment ID</th>
                                     <td>{{ $user->enrol_id }}</td>
                                 </tr>
+                                <tr>
+                                    <th>Profile</th>
+                                    <td><img src="{{ asset('/uploads/images/'.$user->image) }}" alt="image"></td>
+                                </tr>                                
                                 <tr>
                                     <th>Name</th>
                                     <td>{{ $user->name }}</td>

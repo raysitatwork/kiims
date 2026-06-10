@@ -78,7 +78,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-sm-6 mb-30">
+                    {{-- <div class="col-lg-4 col-sm-6 mb-30">
                         <div class="team-item">
                             <img src="/assets/images/board/member7.jpg" alt="" style="height: 400px;">
                             <div class="content-part">
@@ -87,7 +87,7 @@
                               
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-lg-4 col-sm-6 mb-30">
                         <div class="team-item">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-sm-6 mb-30">
+                    {{-- <div class="col-lg-4 col-sm-6 mb-30">
                         <div class="team-item">
                             <img src="/assets/images/board/member9.jpg" alt="" style="height: 400px;">
                             <div class="content-part">
@@ -109,7 +109,7 @@
                               
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-lg-4 col-sm-6 mb-30">
                         <div class="team-item">

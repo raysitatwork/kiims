@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Admin\AdminController;
@@ -44,6 +45,11 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('/delete/{table}/{id}', [AdminController::class, 'delete'])->name('admin.delete');
 
         Route::get('/logout',[AdminController::class,'logout'])->name('admin.logout');
+
+        Route::get('/student/create',[StudentController::class,'studentcreate'])->name('admin.student.create');
+        Route::post('/student/store',[StudentController::class,'studentstore'])->name('admin.student.store');
+        Route::get('/student/edit/{id}', [StudentController::class, 'studentedit'])->name('admin.student.edit');
+        Route::post('/student/update/{id}', [StudentController::class, 'studentupdate'])->name('admin.student.update');
 
 
     });
