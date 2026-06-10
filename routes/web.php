@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\CenterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,16 +24,15 @@ use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/captcha', [AdminController::class, 'generateCaptcha']);
 
-Route::group(['prefix'=>'admin'],function(){
-    Route::group(['middleware'=>'admin.guest'],function(){
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['middleware' => 'admin.guest'], function () {
 
         Route::get('/login', [AdminController::class, 'login'])->name('admin.login');
 
-        Route::post('/authenticate',[AdminController::class,'authenticate'])->name('admin.authenticate');
-
+        Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('admin.authenticate');
     });
 
-    Route::group(['middleware'=>'admin.auth'],function(){
+    Route::group(['middleware' => 'admin.auth'], function () {
 
         Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
         Route::get('/enquiry', [AdminController::class, 'enquiry'])->name('admin.enquiry');
@@ -44,13 +44,24 @@ Route::group(['prefix'=>'admin'],function(){
 
         Route::get('/delete/{table}/{id}', [AdminController::class, 'delete'])->name('admin.delete');
 
-        Route::get('/logout',[AdminController::class,'logout'])->name('admin.logout');
+        Route::get('/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
-        Route::get('/student/create',[StudentController::class,'studentcreate'])->name('admin.student.create');
-        Route::post('/student/store',[StudentController::class,'studentstore'])->name('admin.student.store');
+        Route::get('/student/create', [StudentController::class, 'studentcreate'])->name('admin.student.create');
+        Route::post('/student/store', [StudentController::class, 'studentstore'])->name('admin.student.store');
         Route::get('/student/edit/{id}', [StudentController::class, 'studentedit'])->name('admin.student.edit');
         Route::post('/student/update/{id}', [StudentController::class, 'studentupdate'])->name('admin.student.update');
 
+
+        // Center Route
+        Route::get('/center', [CenterController::class, 'index'])->name('center.index');
+        Route::get('/center/create', [CenterController::class, 'create'])->name('center.create');
+        Route::post('/center/store', [CenterController::class, 'store'])->name('center.store');
+
+        Route::get('/center/edit/{id}', [CenterController::class, 'edit'])->name('center.edit');
+        Route::post('/center/update/{id}', [CenterController::class, 'update'])->name('center.update');
+
+        Route::get('/center/delete/{id}', [CenterController::class, 'destroy'])->name('center.delete');
+        // Center Route
 
     });
 });
@@ -64,6 +75,9 @@ Route::get('/team', [HomeController::class, 'team']);
 Route::get('/gallery', [HomeController::class, 'gallery']);
 Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/blog', [HomeController::class, 'blog']);
+Route::get('/center', [HomeController::class, 'center']);
+
+
 Route::get('/payment', [HomeController::class, 'payment']);
 Route::get('/enquiry', [HomeController::class, 'enquiry']);
 Route::get('/frechicy', [HomeController::class, 'frechicy']);
@@ -105,5 +119,3 @@ Route::post('/enquiry', [HomeController::class, 'enquiry'])->name('enquiry.user'
 Route::post('/frenchise', [HomeController::class, 'frenchise'])->name('frenchise.user');
 Route::get('/admin/search-by-enrollment', [HomeController::class, 'searchByEnrollment'])->name('admin.searchByEnrollment');
 Route::get('/verify', [HomeController::class, 'verify'])->name('verify.user');
-
-

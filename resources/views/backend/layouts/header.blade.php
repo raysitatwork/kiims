@@ -130,6 +130,15 @@
                 <i class="icon-layers menu-icon"></i>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ Route('center.index') }}">
+                <span class="menu-title">Center</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+            </li>
+
+
             {{-- <li class="nav-item">
               <a class="nav-link" href="index.html">
                 <span class="menu-title">Dashboard</span>

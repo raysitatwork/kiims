@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\CenterModel;
 use Illuminate\Http\Request;
 use App\Models\RegisterUser;
 use Illuminate\Support\Facades\DB;
@@ -39,6 +40,12 @@ class HomeController extends Controller
     public function blog()
     {
         return view('frontend.blog');
+    }
+
+    public function center()
+    {
+        $centers = CenterModel::latest()->get();
+        return view('frontend.center', compact('centers'));
     }
     
 

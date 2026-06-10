@@ -12,34 +12,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/assets/images/rays.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/images/rays.png') }}">
     <!-- Bootstrap v4.4.1 css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/animate.css') }}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/owl.carousel.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/slick.css') }}">
     <!-- off canvas css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/off-canvas.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/off-canvas.css') }}">
     <!-- linea-font css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/fonts/linea-fonts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/fonts/linea-fonts.css') }}">
     <!-- flaticon css  -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/fonts/flaticon.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/fonts/flaticon.css') }}">
     <!-- magnific popup css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/magnific-popup.css') }}">
     <!-- Main Menu css -->
-    <link rel="stylesheet" href="{{asset('/assets/css/rsmenu-main.css')}}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/rsmenu-main.css') }}">
     <!-- spacing css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/rs-spacing.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/rs-spacing.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}">
     <!-- This stylesheet dynamically changed from style.less -->
     <!-- responsive css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/responsive.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
@@ -58,11 +58,11 @@
         }
 
         @media (min-width:1300px) {
-        .header_banner img{
-            width: 100%;
-            /* height: 300px;  */
+            .header_banner img {
+                width: 100%;
+                /* height: 300px;  */
+            }
         }
-    }
 
         @media (max-width:500px) {
             .top_header h2 {
@@ -70,8 +70,8 @@
             }
 
             .top_header_logo {
-            height: 60px;
-        }
+                height: 60px;
+            }
 
             .top_header h3 {
                 font-size: 16px;
@@ -87,7 +87,8 @@
             justify-content: center;
             align-items: center;
         }
-        .logo_show .light-logo img{
+
+        .logo_show .light-logo img {
             display: block !important;
         }
     </style>
@@ -166,11 +167,11 @@
 
 
             <div class="container-fluid px-0 header_banner d-none d-md-block">
-                <img src="{{asset('/assets/images/banner_logo.jpg')}}" alt="">
+                <img src="{{ asset('/assets/images/banner_logo.jpg') }}" alt="">
             </div>
 
             <div class="container-fluid px-0 header_banner d-block d-md-none">
-                <img src="{{asset('/assets/images/banner_mobile.jpg')}}" alt="">
+                <img src="{{ asset('/assets/images/banner_mobile.jpg') }}" alt="">
             </div>
 
 
@@ -179,12 +180,12 @@
             <!-- Menu Start -->
             <div class="menu-area menu-sticky" id="navbar">
                 <div class="logo-part d-none d-lg-block">
-                    <a class="light-logo d-none" href="{{url('/')}}">
-                        <img class="navbar_logo d-none" src="{{asset('/assets/images/kims.jpg')}}" alt="KIMS Logo"
+                    <a class="light-logo d-none" href="{{ url('/') }}">
+                        <img class="navbar_logo d-none" src="{{ asset('/assets/images/kims.jpg') }}" alt="KIMS Logo"
                             style="height: 100px !important; width: auto;max-height:80px !important;">
                     </a>
-                    <a class="small-logo" href="{{url('/')}}">
-                        <img class="logo" src="{{asset('/assets/images/kims.jpg')}}" alt="KIMS logo">
+                    <a class="small-logo" href="{{ url('/') }}">
+                        <img class="logo" src="{{ asset('/assets/images/kims.jpg') }}" alt="KIMS logo">
                     </a>
                 </div>
                 <div class="container">
@@ -217,10 +218,10 @@
                             </div>
                             <nav class="rs-menu">
                                 <ul class="nav-menu">
-                                    <li class=" current-menu-item"> <a href="{{url('/')}}">Home</a>
+                                    <li class=" current-menu-item"> <a href="{{ url('/') }}">Home</a>
                                     </li>
                                     <!-- <li class="">
-                                        <a href="{{url('/about')}}">About</a>
+                                        <a href="{{ url('/about') }}">About</a>
                                     </li> -->
 
                                     <li class="menu-item-has-children">
@@ -265,9 +266,12 @@
                                                     <li><a href="{{ url('pharmacy') }}">PHARMACY</a></li>
                                                     <li><a href="{{ url('dpharma') }}">DPHARMA</a></li>
                                                     <li><a href="{{ url('bpharma') }}">BPHARMA</a></li>
-                                                    <li><a href="{{ url('others-bsc-courses') }}">Other BSC Course</a></li>
-                                                    <li><a href="{{ url('others-certificate-courses') }}">Other Certificate Course</a></li>
-                                                    <li><a href="{{ url('others-diploma-courses') }}">Other Diploma Courses</a></li>
+                                                    <li><a href="{{ url('others-bsc-courses') }}">Other BSC Course</a>
+                                                    </li>
+                                                    <li><a href="{{ url('others-certificate-courses') }}">Other
+                                                            Certificate Course</a></li>
+                                                    <li><a href="{{ url('others-diploma-courses') }}">Other Diploma
+                                                            Courses</a></li>
                                                 </div>
 
                                             </div>
@@ -280,7 +284,7 @@
                                         <a href="{{url('/team')}}">Our director body</a>
                                     </li> --}}
                                     <li class="">
-                                        <a href="{{url('gallery')}}">Gallery</a>
+                                        <a href="{{ url('gallery') }}">Gallery</a>
 
                                     </li>
 
@@ -335,7 +339,7 @@
                                     <li class="menu-item-has-children">
                                         <a href="#">Verification</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{{route('verify.user')}}">Admission verification</a></li>
+                                            <li><a href="{{ route('verify.user') }}">Admission verification</a></li>
                                             <li><a href="">Certificate verification</a></li>
                                             <!-- <li><a href="">Our affiliated institution
                                                 </a></li> -->
@@ -356,6 +360,10 @@
                                         </ul>
                                     </li>
 
+                                    <li class="">
+                                        <a href="{{ url('center') }}">Center</a>
+                                    </li>
+
 
                                     {{-- <li class="">
                                         <a href="{{url('contact')}}">Contact</a>
@@ -368,7 +376,7 @@
                         <div class="expand-btn-inner">
                             <ul>
                                 <li>
-                                    <a class="apply-btn" href="{{url('register')}}">Registration</a>
+                                    <a class="apply-btn" href="{{ url('register') }}">Registration</a>
                                 </li>
                             </ul>
                             {{-- <span><a id="nav-expander" class="nav-expander style5">
@@ -395,7 +403,7 @@
                     </div>
                 </div>
                 <div class="canvas-logo">
-                    <a href=""><img src="{{asset('/assets/images/photos/logo.jpg')}}" alt="logo"></a>
+                    <a href=""><img src="{{ asset('/assets/images/photos/logo.jpg') }}" alt="logo"></a>
                 </div>
                 <div class="offcanvas-text">
                     <p>We denounce with righteous indige nationality and dislike men who are so beguiled and demo by the
@@ -403,32 +411,32 @@
                 </div>
                 <div class="offcanvas-gallery">
                     <div class="gallery-img">
-                        <a class="image-popup" href="{{asset('/assets/images/gallery/1.jpg')}}"><img
-                                src="{{asset('assets/images/gallery/1.jpg')}}" alt=""></a>
+                        <a class="image-popup" href="{{ asset('/assets/images/gallery/1.jpg') }}"><img
+                                src="{{ asset('assets/images/gallery/1.jpg') }}" alt=""></a>
                     </div>
                     <div class="gallery-img">
-                        <a class="image-popup" href="{{asset('/assets/images/gallery/2.jpg')}}"><img
-                                src="{{asset('assets/images/gallery/2.jpg')}}" alt=""></a>
+                        <a class="image-popup" href="{{ asset('/assets/images/gallery/2.jpg') }}"><img
+                                src="{{ asset('assets/images/gallery/2.jpg') }}" alt=""></a>
                     </div>
                     <div class="gallery-img">
-                        <a class="image-popup" href="{{asset('/assets/images/gallery/3.jpg')}}"><img
-                                src="{{asset('assets/images/gallery/3.jpg')}}" alt=""></a>
+                        <a class="image-popup" href="{{ asset('/assets/images/gallery/3.jpg') }}"><img
+                                src="{{ asset('assets/images/gallery/3.jpg') }}" alt=""></a>
                     </div>
                     <div class="gallery-img">
-                        <a class="image-popup" href="{{asset('/assets/images/gallery/4.jpg')}}"><img
-                                src="{{asset('assets/images/gallery/4.jpg')}}" alt=""></a>
+                        <a class="image-popup" href="{{ asset('/assets/images/gallery/4.jpg') }}"><img
+                                src="{{ asset('assets/images/gallery/4.jpg') }}" alt=""></a>
                     </div>
                     <div class="gallery-img">
-                        <a class="image-popup" href="{{asset('/assets/images/gallery/5.jpg')}}"><img
-                                src="{{asset('assets/images/gallery/5.jpg')}}" alt=""></a>
+                        <a class="image-popup" href="{{ asset('/assets/images/gallery/5.jpg') }}"><img
+                                src="{{ asset('assets/images/gallery/5.jpg') }}" alt=""></a>
                     </div>
                     <div class="gallery-img">
-                        <a class="image-popup" href="{{asset('/assets/images/gallery/6.jpg')}}"><img
-                                src="{{asset('assets/images/gallery/6.jpg')}}" alt=""></a>
+                        <a class="image-popup" href="{{ asset('/assets/images/gallery/6.jpg') }}"><img
+                                src="{{ asset('assets/images/gallery/6.jpg') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="map-img">
-                    <img src="{{asset('/assets/images/map.jpg')}}" alt="">
+                    <img src="{{ asset('/assets/images/map.jpg') }}" alt="">
                 </div>
                 <div class="canvas-contact">
                     <ul class="social">
